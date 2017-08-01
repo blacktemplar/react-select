@@ -777,6 +777,7 @@ var Option = (function (_React$Component) {
 		this.handleMouseEnter = this.handleMouseEnter.bind(this);
 		this.handleMouseMove = this.handleMouseMove.bind(this);
 		this.handleTouchStart = this.handleTouchStart.bind(this);
+		this.handleTouchEnd = this.handleTouchEnd.bind(this);
 		this.onFocus = this.onFocus.bind(this);
 	}
 
@@ -1224,7 +1225,7 @@ var Select = (function (_React$Component) {
 				});
 			} else {
 				// otherwise, focus the input and open the menu
-				this._openAfterFocus = true;
+				this._openAfterFocus = this.props.openAfterFocus;
 				this.focus();
 			}
 		}
